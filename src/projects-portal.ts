@@ -29,18 +29,18 @@ const projects: Project[] = [
   },
   {
     name: 'cairn-code',
-    description: 'A Rust-based CLI LLM coding agent, inspired by Claude Code. Built with an autonomous tool loop, streaming outputs, and local compiler validation.',
+    description: 'An autonomous software engineering assistant designed to execute terminal commands, read files, and patch code directly inside your workspace with multi-turn reasoning.',
     category: 'ai',
-    tags: ['Rust', 'LLM', 'CLI', 'Agentic'],
+    tags: ['Rust', 'CLI', 'LLM Agent', 'Local-first'],
     repoUrl: 'https://github.com/Cairn/cairn-code',
     isPrivate: true,
     icon: '⚙️'
   },
   {
     name: 'mneme',
-    description: 'A Python-based semantic caching layer for LLMs. Implements drop-in OpenAI client replacement, local sentence-transformer embeddings, SQLite persistence, and security keywords auto-filtering.',
+    description: 'A zero-dependency semantic caching library for Python. Replaces complex database setups with an embedded SQLite vector cache and local model inference to cut LLM costs and latency.',
     category: 'ai',
-    tags: ['Python', 'LLM Cache', 'SQLite', 'Embeddings'],
+    tags: ['Python', 'LLM Cache', 'SQLite', 'Local-first'],
     repoUrl: 'https://github.com/Cairn/mneme',
     isPrivate: true,
     icon: '🧠'
@@ -56,18 +56,18 @@ const projects: Project[] = [
   },
   {
     name: 'linux-protect',
-    description: 'Local-first anti-malware daemon for Ubuntu. Monitors files using fanotify and analyzes malicious signatures using libyara in real-time.',
+    description: 'A lightweight, local-first security daemon for Ubuntu environments. Delivers real-time filesystem monitoring and automated threat signature containment.',
     category: 'systems',
-    tags: ['Linux', 'C', 'Security', 'fanotify'],
+    tags: ['C', 'Linux', 'Security', 'Local-first'],
     repoUrl: 'https://github.com/Cairn/linux-protect',
     isPrivate: true,
     icon: '🛡️'
   },
   {
     name: 'router',
-    description: 'Core routing systems and low-level data packet processing loops designed for local networks and custom temporal temporal setups.',
+    description: 'A high-throughput networking router engine engineered for low-latency packet processing across distributed private cloud architectures.',
     category: 'systems',
-    tags: ['Go', 'Networking', 'TCP/IP', 'BGP'],
+    tags: ['Go', 'Networking', 'TCP/IP', 'Performance'],
     repoUrl: 'https://github.com/Cairn/router',
     isPrivate: true,
     icon: '🔌'
