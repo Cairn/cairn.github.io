@@ -10,6 +10,24 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: 'floriography',
+    description: 'Floriography — a random flower growth generator, its Latin name, its Victorian meaning, and a matching verse from a real English poem.',
+    category: 'creative',
+    tags: ['TypeScript', 'Canvas', 'Botany', 'Poetry'],
+    repoUrl: 'https://github.com/Cairn/floriography',
+    isPrivate: false,
+    icon: '🌸'
+  },
+  {
+    name: 'cairn.github.io',
+    description: 'The official, highly interactive static site portal for Cairn Software, built with procedural backgrounds, flow diagrams, and project catalogs.',
+    category: 'creative',
+    tags: ['TypeScript', 'Vite', 'HTML5 Canvas', 'CSS3'],
+    repoUrl: 'https://github.com/Cairn/cairn.github.io',
+    isPrivate: false,
+    icon: '🌐'
+  },
+  {
     name: 'cairn-code',
     description: 'A Rust-based CLI LLM coding agent, inspired by Claude Code. Built with an autonomous tool loop, streaming outputs, and local compiler validation.',
     category: 'ai',
@@ -53,15 +71,6 @@ const projects: Project[] = [
     repoUrl: 'https://github.com/Cairn/router',
     isPrivate: true,
     icon: '🔌'
-  },
-  {
-    name: 'floriography',
-    description: 'Floriography — a random flower growth generator, its Latin name, its Victorian meaning, and a matching verse from a real English poem.',
-    category: 'creative',
-    tags: ['TypeScript', 'Canvas', 'Botany', 'Poetry'],
-    repoUrl: 'https://github.com/Cairn/floriography',
-    isPrivate: false,
-    icon: '🌸'
   },
   {
     name: 'bizzareum',
