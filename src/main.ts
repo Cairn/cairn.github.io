@@ -1,6 +1,5 @@
 import './style.css';
 import { initCanvasBackground } from './canvas-bg.ts';
-import { initAgentRepl } from './agent-repl.ts';
 import { initFloriography } from './floriography-visual.ts';
 import { initStackVisualizer } from './stack-visualizer.ts';
 
@@ -12,7 +11,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="logo-text">Cairn <span>Software</span></div>
     </div>
     <nav class="nav-links">
-      <a href="#repl-section">Cairn Code</a>
       <a href="#floriography-section">Floriography</a>
       <a href="#stack-section">Architecture</a>
       <a href="#philosophy-section">Philosophy</a>
@@ -30,14 +28,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </section>
 
   <!-- Interactive Grid Section -->
-  <section class="grid-container" id="repl-section">
-    <!-- Left Panel: Cairn Code Simulator -->
-    <div class="glass-card">
-      <div id="terminal-card"></div>
-    </div>
-
-    <!-- Right Panel: Floriography Card -->
-    <div class="glass-card" id="floriography-section">
+  <section class="grid-container" id="floriography-section">
+    <!-- Floriography Card -->
+    <div class="glass-card grid-full-width">
       <div id="floriography-card"></div>
     </div>
   </section>
@@ -95,6 +88,5 @@ document.body.prepend(bgCanvas);
 initCanvasBackground(bgCanvas);
 
 // Initialize Components
-initAgentRepl(document.getElementById('terminal-card')!);
 initFloriography(document.getElementById('floriography-card')!);
 initStackVisualizer(document.getElementById('stack-canvas') as HTMLCanvasElement);
