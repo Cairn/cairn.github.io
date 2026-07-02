@@ -21,8 +21,7 @@ The official static website and repository catalog for **Cairn Software** (hoste
 
 ### Prerequisites
 
-*   [Node.js](https://nodejs.org/) (v20+)
-*   [npm](https://www.npmjs.com/) or another package manager (Bun/pnpm)
+*   [Bun](https://bun.sh/) (v1.0+) — Recommended for ultra-fast installs, bundling, and local compilation.
 
 ### Setup & Run
 
@@ -34,26 +33,27 @@ The official static website and repository catalog for **Cairn Software** (hoste
 
 2.  Install dependencies:
     ```bash
-    npm install
+    bun install
     ```
 
 3.  Start the local development server:
     ```bash
-    npm run dev
+    bun run dev
     ```
 
 4.  Compile TypeScript checks and build static distribution bundles:
     ```bash
-    npm run build
+    bun run build
     ```
 
 ## 📦 Deployment Workflow
 
 The site utilizes GitHub Actions for automated building and hosting. Every time code is pushed to the `main` branch, the workflow file in `.github/workflows/deploy.yml` triggers to:
 1.  Check out the repository.
-2.  Install dependencies using `npm ci`.
-3.  Compile and build the Vite static package (`dist/`).
-4.  Publish the compiled assets directly to GitHub Pages.
+2.  Set up the latest stable version of **Bun** (via `oven-sh/setup-bun`).
+3.  Install dependencies using `bun install --frozen-lockfile`.
+4.  Compile and build the Vite static package (`bun run build`).
+5.  Publish the compiled assets (`dist/`) directly to GitHub Pages.
 
 ---
 
