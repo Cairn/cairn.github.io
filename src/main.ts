@@ -3,6 +3,7 @@ import { initCanvasBackground } from './canvas-bg.ts';
 import { initCairnCodeShowcase } from './cairn-code-showcase.ts';
 import { initFloriography } from './floriography-visual.ts';
 import { initStackVisualizer } from './stack-visualizer.ts';
+import { initProjectsPortal } from './projects-portal.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <!-- Navigation Header -->
@@ -14,6 +15,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <nav class="nav-links">
       <a href="#showcase-section">Cairn Code</a>
       <a href="#floriography-section">Floriography</a>
+      <a href="#projects-section">Projects</a>
       <a href="#stack-section">Architecture</a>
       <a href="#philosophy-section">Philosophy</a>
       <a href="https://github.com/Cairn" target="_blank">GitHub</a>
@@ -39,6 +41,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <!-- Right Panel: Floriography Card -->
     <div class="glass-card" id="floriography-section">
       <div id="floriography-card"></div>
+    </div>
+  </section>
+
+  <!-- Projects Portal Section -->
+  <section class="grid-container" id="projects-section">
+    <div class="glass-card grid-full-width">
+      <div id="projects-portal-card"></div>
     </div>
   </section>
 
@@ -97,4 +106,5 @@ initCanvasBackground(bgCanvas);
 // Initialize Components
 initCairnCodeShowcase(document.getElementById('cairn-code-showcase')!);
 initFloriography(document.getElementById('floriography-card')!);
+initProjectsPortal(document.getElementById('projects-portal-card')!);
 initStackVisualizer(document.getElementById('stack-canvas') as HTMLCanvasElement);
