@@ -17,7 +17,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <a href="#projects-section">Projects</a>
       <a href="#stack-section">Architecture</a>
       <a href="#philosophy-section">Philosophy</a>
-      <a href="https://github.com/Cairn" target="_blank">GitHub</a>
+      <a href="https://github.com/Cairn/cairn.github.io" target="_blank">GitHub</a>
     </nav>
   </header>
 
@@ -90,7 +90,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="footer-links">
       <a href="https://github.com/Cairn/cairn-code" target="_blank">Cairn Code</a>
       <a href="https://github.com/Cairn/floriography" target="_blank">Floriography</a>
-      <a href="https://github.com/Cairn" target="_blank">GitHub Org</a>
+      <a href="https://github.com/Cairn/cairn.github.io" target="_blank">GitHub</a>
     </div>
     <div>&copy; 2026 Cairn Software. Built with care for the future of agentic coding.</div>
   </footer>
