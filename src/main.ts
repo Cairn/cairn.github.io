@@ -9,7 +9,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <!-- Navigation Header -->
   <header class="navbar">
     <div class="logo-container">
-      <div class="logo-icon">C</div>
       <div class="logo-text">Cairn <span>Software</span></div>
     </div>
     <nav class="nav-links">
