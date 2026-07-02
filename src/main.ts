@@ -8,9 +8,9 @@ import { initProjectsPortal } from './projects-portal.ts';
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <!-- Navigation Header -->
   <header class="navbar">
-    <div class="logo-container">
+    <a href="#" class="logo-container">
       <div class="logo-text">Cairn <span>Software</span></div>
-    </div>
+    </a>
     <nav class="nav-links">
       <a href="#showcase-section">Cairn Code</a>
       <a href="#floriography-section">Floriography</a>
