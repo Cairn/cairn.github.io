@@ -38,9 +38,9 @@ const projects: Project[] = [
   },
   {
     name: 'mneme',
-    description: 'The Memory Layer for Intelligent Apps. Provides persistent, contextual recall across agentic sessions using vector indexing and local cache.',
+    description: 'A Python-based semantic caching layer for LLMs. Implements drop-in OpenAI client replacement, local sentence-transformer embeddings, SQLite persistence, and security keywords auto-filtering.',
     category: 'ai',
-    tags: ['Database', 'AI Memory', 'TypeScript', 'JSON'],
+    tags: ['Python', 'LLM Cache', 'SQLite', 'Embeddings'],
     repoUrl: 'https://github.com/Cairn/mneme',
     isPrivate: true,
     icon: '🧠'
