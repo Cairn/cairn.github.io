@@ -28,6 +28,15 @@ const projects: Project[] = [
     icon: '🌐'
   },
   {
+    name: 'mneme',
+    description: 'A zero-dependency semantic caching library for Python. Replaces complex database setups with an embedded SQLite vector cache and local model inference to cut LLM costs and latency.',
+    category: 'ai',
+    tags: ['Python', 'LLM Cache', 'SQLite', 'Local-first'],
+    repoUrl: 'https://github.com/Cairn/mneme',
+    isPrivate: false,
+    icon: '🧠'
+  },
+  {
     name: 'cairn-code',
     description: 'An autonomous software engineering assistant designed to execute terminal commands, read files, and patch code directly inside your workspace with multi-turn reasoning.',
     category: 'ai',
@@ -35,15 +44,6 @@ const projects: Project[] = [
     repoUrl: 'https://github.com/Cairn/cairn-code',
     isPrivate: true,
     icon: '⚙️'
-  },
-  {
-    name: 'mneme',
-    description: 'A zero-dependency semantic caching library for Python. Replaces complex database setups with an embedded SQLite vector cache and local model inference to cut LLM costs and latency.',
-    category: 'ai',
-    tags: ['Python', 'LLM Cache', 'SQLite', 'Local-first'],
-    repoUrl: 'https://github.com/Cairn/mneme',
-    isPrivate: true,
-    icon: '🧠'
   },
   {
     name: 'synapse-crm',
