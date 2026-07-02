@@ -1,5 +1,6 @@
 import './style.css';
 import { initCanvasBackground } from './canvas-bg.ts';
+import { initCairnCodeShowcase } from './cairn-code-showcase.ts';
 import { initFloriography } from './floriography-visual.ts';
 import { initStackVisualizer } from './stack-visualizer.ts';
 
@@ -11,6 +12,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="logo-text">Cairn <span>Software</span></div>
     </div>
     <nav class="nav-links">
+      <a href="#showcase-section">Cairn Code</a>
       <a href="#floriography-section">Floriography</a>
       <a href="#stack-section">Architecture</a>
       <a href="#philosophy-section">Philosophy</a>
@@ -28,9 +30,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </section>
 
   <!-- Interactive Grid Section -->
-  <section class="grid-container" id="floriography-section">
-    <!-- Floriography Card -->
-    <div class="glass-card grid-full-width">
+  <section class="grid-container" id="showcase-section">
+    <!-- Left Panel: Cairn Code Showcase -->
+    <div class="glass-card">
+      <div id="cairn-code-showcase"></div>
+    </div>
+
+    <!-- Right Panel: Floriography Card -->
+    <div class="glass-card" id="floriography-section">
       <div id="floriography-card"></div>
     </div>
   </section>
@@ -88,5 +95,6 @@ document.body.prepend(bgCanvas);
 initCanvasBackground(bgCanvas);
 
 // Initialize Components
+initCairnCodeShowcase(document.getElementById('cairn-code-showcase')!);
 initFloriography(document.getElementById('floriography-card')!);
 initStackVisualizer(document.getElementById('stack-canvas') as HTMLCanvasElement);
