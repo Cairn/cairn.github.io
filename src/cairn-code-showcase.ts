@@ -66,7 +66,7 @@ export function initCairnCodeShowcase(container: HTMLElement) {
           <span class="legend-dot green"></span> Active
           <span class="legend-dot gray"></span> Pending
         </div>
-        <div class="pipeline-model">Powered by Claude 3.7 Sonnet & Gemini 2.0 Pro</div>
+        <div class="pipeline-model">Powered by Claude Fable 5 & Gemini 3.5</div>
       </div>
     </div>
   `;

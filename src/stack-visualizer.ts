@@ -38,9 +38,9 @@ export function initStackVisualizer(canvas: HTMLCanvasElement) {
   function initNodes() {
     nodes = [
       // Models
-      { id: 'claude', label: 'Claude 3.7', x: width * 0.15, y: height * 0.25, size: 28, color: '#f472b6', pulse: 0, pulseSpeed: 0.02, category: 'model' },
-      { id: 'gemini', label: 'Gemini 2.0', x: width * 0.15, y: height * 0.5, size: 28, color: '#60a5fa', pulse: Math.PI / 3, pulseSpeed: 0.02, category: 'model' },
-      { id: 'gpt4', label: 'GPT-5', x: width * 0.15, y: height * 0.75, size: 28, color: '#10b981', pulse: Math.PI * 2 / 3, pulseSpeed: 0.02, category: 'model' },
+      { id: 'claude', label: 'Claude Fable 5', x: width * 0.15, y: height * 0.25, size: 28, color: '#f472b6', pulse: 0, pulseSpeed: 0.02, category: 'model' },
+      { id: 'gemini', label: 'Gemini 3.5', x: width * 0.15, y: height * 0.5, size: 28, color: '#60a5fa', pulse: Math.PI / 3, pulseSpeed: 0.02, category: 'model' },
+      { id: 'gpt4', label: 'GPT 5.6', x: width * 0.15, y: height * 0.75, size: 28, color: '#10b981', pulse: Math.PI * 2 / 3, pulseSpeed: 0.02, category: 'model' },
 
       // Core Agent Loop
       { id: 'core', label: 'CAIRN CORE AGENT', x: width * 0.45, y: height * 0.5, size: 45, color: '#a855f7', pulse: 0, pulseSpeed: 0.03, category: 'core' },
