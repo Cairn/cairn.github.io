@@ -2,15 +2,23 @@ export function initStackVisualizer(canvas: HTMLCanvasElement) {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
-  let width = (canvas.width = canvas.parentElement?.clientWidth || 600);
-  let height = (canvas.height = 360);
+  let width = canvas.parentElement?.clientWidth || 600;
+  let height = 360;
+
+  function applySize() {
+    const dpr = window.devicePixelRatio || 1;
+    width = canvas.parentElement?.clientWidth || width;
+    height = 360;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  applySize();
 
   window.addEventListener('resize', () => {
-    if (canvas.parentElement) {
-      width = canvas.width = canvas.parentElement.clientWidth;
-      height = canvas.height = 360;
-      initNodes();
-    }
+    applySize();
+    initNodes();
   });
 
   interface StackNode {
