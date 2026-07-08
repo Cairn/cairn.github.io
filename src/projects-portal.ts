@@ -74,9 +74,9 @@ const projects: Project[] = [
   },
   {
     name: 'bizzareum',
-    description: 'Every refresh, generates a new oil painting style graphic and description of the weirdest historical event from a random year in history.',
+    description: 'Every refresh, a museum-style exhibit of a curated oil painting and the story of the weirdest real historical event from a random year.',
     category: 'creative',
-    tags: ['Dall-E', 'Python', 'History', 'API'],
+    tags: ['JavaScript', 'HTML', 'History', 'Zero-deps'],
     repoUrl: 'https://github.com/Cairn/bizzareum',
     isPrivate: true,
     icon: '🎨'
