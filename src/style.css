@@ -9,13 +9,14 @@
   --bg-deep: #06070a;
   --bg-card: rgba(17, 19, 28, 0.7);
   --border-glow: rgba(168, 85, 247, 0.2);
-  --border-dim: rgba(255, 255, 255, 0.08);
-  
-  --text-main: #94a3b8;
+  --border-dim: rgba(255, 255, 255, 0.12);
+
+  --text-main: #b6c2d6;
   --text-bright: #f8fafc;
-  --text-muted: #64748b;
-  
+  --text-muted: #8b98ad;
+
   --primary: #a855f7;
+  --primary-bright: #c493fc;
   --primary-glow: rgba(168, 85, 247, 0.4);
   --sky: #38bdf8;
   --sky-glow: rgba(56, 189, 248, 0.4);
@@ -159,10 +160,10 @@ body {
 .badge {
   display: inline-block;
   padding: 6px 14px;
-  background: rgba(168, 85, 247, 0.1);
-  border: 1px solid var(--primary-glow);
+  background: rgba(168, 85, 247, 0.14);
+  border: 1px solid rgba(192, 132, 252, 0.5);
   border-radius: 9999px;
-  color: var(--primary);
+  color: var(--primary-bright);
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 24px;
@@ -178,8 +179,9 @@ body {
   color: var(--text-bright);
   margin-bottom: 24px;
   letter-spacing: -1.5px;
-  background: linear-gradient(135deg, #fff 30%, var(--text-main) 70%, var(--primary) 100%);
+  background: linear-gradient(120deg, #ffffff 0%, #eef2ff 55%, #d8b4fe 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -304,7 +306,7 @@ body {
 
 .tab-btn.active {
   background: #090a0f;
-  color: var(--primary);
+  color: var(--primary-bright);
   border-bottom: 2px solid var(--primary);
   font-weight: 600;
 }
@@ -383,7 +385,7 @@ body {
 }
 
 .prompt-symbol {
-  color: var(--primary);
+  color: var(--primary-bright);
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: bold;
@@ -454,7 +456,7 @@ body {
 
 .file-item.file.active {
   background: rgba(168, 85, 247, 0.15);
-  color: var(--primary);
+  color: var(--primary-bright);
   font-weight: bold;
 }
 
@@ -557,7 +559,7 @@ body {
 .sugg-btn:hover {
   background: rgba(168, 85, 247, 0.1);
   border-color: var(--primary-glow);
-  color: var(--primary);
+  color: var(--primary-bright);
 }
 
 .terminal-metrics {
@@ -991,9 +993,9 @@ body {
   font-size: 10px;
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--primary);
-  background: rgba(168, 85, 247, 0.1);
-  border: 1px solid var(--primary-glow);
+  color: var(--primary-bright);
+  background: rgba(168, 85, 247, 0.14);
+  border: 1px solid rgba(192, 132, 252, 0.5);
   padding: 2px 8px;
   border-radius: 9999px;
   margin-bottom: 8px;
@@ -1014,7 +1016,7 @@ body {
   border-radius: 8px;
   padding: 16px;
   transition: var(--transition);
-  opacity: 0.6;
+  opacity: 0.78;
 }
 
 .pipeline-step.active {
@@ -1033,7 +1035,7 @@ body {
 }
 
 .pipeline-step.active .step-num {
-  color: var(--primary);
+  color: var(--primary-bright);
 }
 
 .step-content {
@@ -1142,11 +1144,11 @@ body {
 }
 
 .filter-tab {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-dim);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 8px 16px;
   border-radius: 6px;
-  color: var(--text-main);
+  color: #dde5f0;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
@@ -1154,14 +1156,16 @@ body {
 }
 
 .filter-tab:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
   color: var(--text-bright);
 }
 
 .filter-tab.active {
-  background: rgba(168, 85, 247, 0.15);
-  border-color: var(--primary);
-  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--sky));
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.35);
 }
 
 .projects-grid {
