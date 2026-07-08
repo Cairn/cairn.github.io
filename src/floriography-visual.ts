@@ -112,6 +112,13 @@ export function initFloriography(container: HTMLElement) {
 
   const canvas = container.querySelector('#flower-canvas') as HTMLCanvasElement;
   const ctx = canvas.getContext('2d');
+
+  // Logical 360x360 drawing space rendered at device resolution for crispness
+  const SIZE = 360;
+  const pixelScale = ((canvas.clientWidth || SIZE) * (window.devicePixelRatio || 1)) / SIZE;
+  canvas.width = SIZE * pixelScale;
+  canvas.height = SIZE * pixelScale;
+  ctx?.setTransform(pixelScale, 0, 0, pixelScale, 0, 0);
   const btnBloom = container.querySelector('#btn-bloom') as HTMLButtonElement;
   const btnWater = container.querySelector('#btn-water') as HTMLButtonElement;
   const flowerInfo = container.querySelector('#flower-info') as HTMLDivElement;
@@ -124,24 +131,24 @@ export function initFloriography(container: HTMLElement) {
 
   function clearCanvas() {
     if (!ctx) return;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, SIZE, SIZE);
     // Draw background
     ctx.fillStyle = '#111319';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
+    ctx.fillRect(0, 0, SIZE, SIZE);
+
     // Grid lines
     ctx.strokeStyle = 'rgba(255,255,255,0.03)';
     ctx.lineWidth = 1;
-    for (let x = 0; x < canvas.width; x += 30) {
+    for (let x = 0; x < SIZE; x += 30) {
       ctx.beginPath();
       ctx.moveTo(x, 0);
-      ctx.lineTo(x, canvas.height);
+      ctx.lineTo(x, SIZE);
       ctx.stroke();
     }
-    for (let y = 0; y < canvas.height; y += 30) {
+    for (let y = 0; y < SIZE; y += 30) {
       ctx.beginPath();
       ctx.moveTo(0, y);
-      ctx.lineTo(canvas.width, y);
+      ctx.lineTo(SIZE, y);
       ctx.stroke();
     }
   }
@@ -152,9 +159,9 @@ export function initFloriography(container: HTMLElement) {
     if (!ctx || !activeFlower) return;
     clearCanvas();
 
-    const cx = canvas.width / 2;
+    const cx = SIZE / 2;
     const maxStemHeight = 120;
-    const stemY = canvas.height - 30;
+    const stemY = SIZE - 30;
 
     // 1. Draw Stem
     ctx.beginPath();
@@ -314,9 +321,9 @@ export function initFloriography(container: HTMLElement) {
           ctx.save();
           ctx.translate(shake, 0);
           
-          const cx = canvas.width / 2;
+          const cx = SIZE / 2;
           const maxStemHeight = 120;
-          const stemY = canvas.height - 30;
+          const stemY = SIZE - 30;
 
           // Draw stem
           ctx.beginPath();
