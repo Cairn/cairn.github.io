@@ -898,6 +898,27 @@ body {
   display: block;
 }
 
+.stack-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.stack-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #e2e8f0;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.stack-label.core {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
 /* About Us and Vision Card (Written to sound extremely human) */
 .about-section {
   display: flex;

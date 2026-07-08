@@ -82,6 +82,11 @@ export function initStackVisualizer(canvas: HTMLCanvasElement) {
 
   initNodes();
 
+  const labelLayer = document.createElement('div');
+  labelLayer.className = 'stack-labels';
+  labelLayer.innerHTML = nodes.map(n => `<span class="stack-label${n.category === 'core' ? ' core' : ''}" style="left:${(n.x / width) * 100}%;top:${(n.y / height) * 100}%">${n.label}</span>`).join('');
+  canvas.parentElement?.appendChild(labelLayer);
+
   function draw() {
     if (!ctx) return;
     ctx.clearRect(0, 0, width, height);
@@ -147,12 +152,6 @@ export function initStackVisualizer(canvas: HTMLCanvasElement) {
       ctx.fill();
       ctx.stroke();
       ctx.shadowBlur = 0; // reset
-
-      // Draw text label
-      ctx.fillStyle = '#e2e8f0';
-      ctx.font = node.category === 'core' ? 'bold 11px system-ui' : '10px system-ui';
-      ctx.textAlign = 'center';
-      ctx.fillText(node.label, node.x, node.y + (node.category === 'core' ? 4 : 3));
     });
 
     requestAnimationFrame(draw);
