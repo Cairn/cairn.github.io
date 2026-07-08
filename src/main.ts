@@ -5,22 +5,26 @@ import { initFloriography } from './floriography-visual.ts';
 import { initStackVisualizer } from './stack-visualizer.ts';
 import { initProjectsPortal } from './projects-portal.ts';
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+document.querySelector<HTMLDivElement>('#app')!.insertAdjacentHTML('beforebegin', `
   <!-- Navigation Header -->
-  <header class="navbar">
-    <a href="#" class="logo-container">
-      <div class="logo-text">Cairn <span>Software</span></div>
-    </a>
-    <nav class="nav-links">
-      <a href="#showcase-section">Cairn Code</a>
-      <a href="#floriography-section">Floriography</a>
-      <a href="#projects-section">Projects</a>
-      <a href="#stack-section">Architecture</a>
-      <a href="#philosophy-section">Philosophy</a>
-      <a href="https://github.com/Cairn" target="_blank">GitHub</a>
-    </nav>
+  <header class="site-header">
+    <div class="navbar">
+      <a href="#" class="logo-container">
+        <div class="logo-text">Cairn <span>Software</span></div>
+      </a>
+      <nav class="nav-links">
+        <a href="#showcase-section">Cairn Code</a>
+        <a href="#floriography-section">Floriography</a>
+        <a href="#projects-section">Projects</a>
+        <a href="#stack-section">Architecture</a>
+        <a href="#philosophy-section">Philosophy</a>
+        <a href="https://github.com/Cairn" target="_blank">GitHub</a>
+      </nav>
+    </div>
   </header>
+`);
 
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <!-- Hero Section -->
   <section class="hero-section">
     <span class="badge">Next Generation Software</span>
