@@ -30,15 +30,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </p>
   </section>
 
-  <!-- Interactive Grid Section -->
+  <!-- Cairn Code Showcase Section -->
   <section class="grid-container" id="showcase-section">
-    <!-- Left Panel: Cairn Code Showcase -->
-    <div class="glass-card">
+    <div class="glass-card grid-full-width">
       <div id="cairn-code-showcase"></div>
     </div>
+  </section>
 
-    <!-- Right Panel: Floriography Card -->
-    <div class="glass-card" id="floriography-section">
+  <!-- Floriography Section -->
+  <section class="grid-container" id="floriography-section">
+    <div class="glass-card grid-full-width">
       <div id="floriography-card"></div>
     </div>
   </section>

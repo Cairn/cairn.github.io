@@ -691,7 +691,7 @@ body {
   flex-grow: 1;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 900px) {
   .garden-workspace {
     flex-direction: row;
   }
@@ -705,16 +705,18 @@ body {
   overflow: hidden;
   width: 100%;
   aspect-ratio: 1;
-  max-width: 280px;
+  max-width: 360px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@media(min-width: 600px) {
+@media(min-width: 900px) {
   .flower-canvas-wrapper {
     margin: 0;
+    flex: 0 0 360px;
+    align-self: center;
   }
 }
 
@@ -753,7 +755,7 @@ body {
   text-align: center;
   color: var(--text-muted);
   font-size: 13px;
-  max-width: 200px;
+  max-width: 320px;
 }
 
 .placeholder-icon {
@@ -765,6 +767,7 @@ body {
 
 .flower-details-card {
   width: 100%;
+  max-width: 640px;
   text-align: left;
 }
 
@@ -1006,6 +1009,13 @@ body {
   flex-direction: column;
   gap: 16px;
   flex-grow: 1;
+}
+
+@media (min-width: 900px) {
+  .pipeline-timeline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .pipeline-step {
