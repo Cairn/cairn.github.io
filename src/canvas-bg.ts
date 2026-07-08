@@ -96,20 +96,6 @@ export function initCanvasBackground(canvas: HTMLCanvasElement) {
   function draw() {
     ctx!.clearRect(0, 0, width, height);
 
-    // Subtle dark gradient background overlay
-    const gradient = ctx!.createRadialGradient(
-      width / 2,
-      height / 2,
-      10,
-      width / 2,
-      height / 2,
-      Math.max(width, height)
-    );
-    gradient.addColorStop(0, 'rgba(15, 17, 23, 0.95)');
-    gradient.addColorStop(1, 'rgba(10, 11, 15, 1)');
-    ctx!.fillStyle = gradient;
-    ctx!.fillRect(0, 0, width, height);
-
     // 1. Draw double helices
     helices.forEach((h) => {
       h.x += h.vx;
